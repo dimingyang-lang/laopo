@@ -22,7 +22,9 @@
 </template>
 
 <script setup>
+import { useRouter } from 'vue-router'
 import {ref} from 'vue'
+const router = useRouter()
 let user=ref('admin')
 let password=ref('1234565')
 import { ElMessage } from 'element-plus'
@@ -32,6 +34,7 @@ const reset=()=>{
 }
 const login=()=>{
   ElMessage.success('登录成功')
+  router.push({name:'homePage'})
 }
 </script>
 

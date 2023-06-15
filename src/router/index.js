@@ -7,6 +7,16 @@ const routes = [
     name: 'login',
     component: login
   },
+  {
+    path:'/homePage',
+    name:'homePage',
+    component:()=>import('../pages/homePage')
+  },
+  {
+    path:'/ExInfo',
+    name:'ExInfo',
+    component:()=>import('../pages/ExInfo')
+  }
 ]
 
 const router = createRouter({
